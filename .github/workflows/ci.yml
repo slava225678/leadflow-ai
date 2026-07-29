@@ -10,9 +10,12 @@ on:
 
 jobs:
   test:
+    
     runs-on: ubuntu-latest
 
     steps:
+      - name: Create .env
+        run: cp .env.example .env
       - name: Checkout repository
         uses: actions/checkout@v4
 
